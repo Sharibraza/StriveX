@@ -1,107 +1,107 @@
-# StriveX
+# Strive
 
-Full-stack web application for AI-assisted interview preparation.
+AI-assisted interview preparation app that turns a job description, resume, and self-summary into a personalized interview plan.
 
-## Tech Stack
+## Latest updates
 
-**Frontend**
-- React (Vite)
+- Updated branding in the frontend title and favicon.
+- Improved the interview flow with protected routes and a persistent navbar.
+- Added report generation from job description, resume, and self-description.
+- Added interview report pages with technical questions, behavioral questions, a preparation roadmap, match score, and skill gaps.
+- Added resume PDF download support from the report view.
+
+## Tech stack
+
+### Frontend
+
+- React + Vite
 - React Router
 - Sass
 - Axios
 
-**Backend**
+### Backend
+
 - Node.js + Express
-- MongoDB (Mongoose)
-- Auth: JWT + bcrypt
-- Google GenAI SDK (@google/genai)
+- MongoDB + Mongoose
+- JWT authentication
+- bcryptjs
+- Google GenAI SDK (`@google/genai`)
 
-## Repository Structure
+## Project structure
 
-- `Frontend/` — React + Vite client
-- `Backend/` — Express API server
+- `frontend/` — React client
+- `backend/` — Express API server
 
-## Getting Started
+## Getting started
 
 ### Prerequisites
 
 - Node.js (LTS recommended)
 - npm
-- MongoDB (local or hosted)
+- MongoDB
 
-### 1) Clone
+### 1) Clone the repo
 
 ```bash
-git clone https://github.com/Sharibraza/InterviewForge_AI_F.git
-cd InterviewForge_AI_F
+git clone https://github.com/Sharibraza/Strive.git
+cd Strive
 ```
 
 ### 2) Backend setup
 
 ```bash
-cd Backend
+cd backend
 npm install
 ```
 
-Create a `.env` file in `Backend/` (example):
+Create `backend/.env`:
 
 ```env
 PORT=3000
-MONGODB_URI=YOUR_MONGODB_CONNECTION_STRING
-JWT_SECRET=YOUR_JWT_SECRET
-GOOGLE_API_KEY=YOUR_GOOGLE_GENAI_API_KEY
+CLIENT_URL=http://localhost:5173
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+GOOGLE_API_KEY=your_google_genai_api_key
 ```
 
-Run the API server (uses nodemon):
+Start the API:
 
 ```bash
 npm run dev
 ```
-
-The server starts on port `3000` by default (see `Backend/server.js`).
 
 ### 3) Frontend setup
 
 In a new terminal:
 
 ```bash
-cd Frontend
+cd frontend
 npm install
 npm run dev
 ```
 
-Vite will print the local dev URL (commonly `http://localhost:5173`).
+## Available scripts
 
-## Scripts
+### backend/
 
-### Backend (`Backend/`)
+- `npm run dev` — start the API server with nodemon
 
-- `npm run dev` — start the dev server (`server.js`) with nodemon
+### frontend/
 
-### Frontend (`Frontend/`)
-
-- `npm run dev` — start Vite dev server
+- `npm run dev` — start the Vite dev server
 - `npm run build` — build for production
-- `npm run preview` — preview production build
+- `npm run lint` — run ESLint
+- `npm run preview` — preview the production build
 
-## Environment Variables
+## Features
 
-Backend reads environment variables via `dotenv`.
-
-| Variable | Purpose |
-| --- | --- |
-| `PORT` | API port (default in code: 3000) |
-| `MONGODB_URI` | MongoDB connection string |
-| `JWT_SECRET` | JWT signing secret |
-| `GOOGLE_API_KEY` | Google GenAI API key |
-
-## Contributing
-
-1. Fork the repo
-2. Create a feature branch: `git checkout -b feature/my-change`
-3. Commit your changes
-4. Open a pull request
+- User registration, login, and logout
+- Protected app routes
+- AI-generated interview plans
+- Resume upload or self-description fallback
+- Interview report history
+- Resume PDF generation
 
 ## License
 
-Add a license file (e.g., MIT) if you plan to open-source this project.
+Add a license file if you plan to open-source the project.
