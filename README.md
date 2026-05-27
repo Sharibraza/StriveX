@@ -2,14 +2,6 @@
 
 AI-assisted interview preparation app that turns a job description, resume, and self-summary into a personalized interview plan.
 
-## Latest updates
-
-- Updated branding in the frontend title and favicon.
-- Improved the interview flow with protected routes and a persistent navbar.
-- Added report generation from job description, resume, and self-description.
-- Added interview report pages with technical questions, behavioral questions, a preparation roadmap, match score, and skill gaps.
-- Added resume PDF download support from the report view.
-
 ## Tech stack
 
 ### Frontend
